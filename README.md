@@ -4,4 +4,4 @@
 <hr>  
 
 ## Template do Projeto
-<a href="https://www.figma.com/file/0yOQR6fGtbdrmqeStiO0jf/7Days-React?type=design&node-id=0-1&t=NvGeyRYQUtYMDdVT-0">🔗 Template do Projeto<a/>
+<a href="https://www.figma.com/file/0yOQR6fGtbdrmqeStiO0jf/7Days-React?type=design&node-id=0-1&t=NvGeyRYQUtYMDdVT-0" target="_black" >🔗 Template do Projeto<a/>
