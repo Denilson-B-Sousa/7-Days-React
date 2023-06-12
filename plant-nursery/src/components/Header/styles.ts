@@ -7,11 +7,10 @@ export const HeaderContainer = styled.header`
     justify-content: space-around;
     align-items: baseline;
     padding-left: 40px;
-    padding-top: 40px;
+    padding-top: 15px;
 
     nav{
         display: flex;
-
     }
 
     ul{
@@ -20,14 +19,12 @@ export const HeaderContainer = styled.header`
         gap: 32px;
     }
 
-
-
-
     a{
         font-family: 'Montserrat', sans-serif;
         font-size: 0.75rem;
         text-decoration: none;
         color: ${(props) => props.theme['black-100']};
+        cursor: pointer;
     }
 
     a:hover{

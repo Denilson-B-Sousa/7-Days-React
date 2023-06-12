@@ -3,11 +3,13 @@ import './App.css'
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './styles/themes/default'
 import { GlobalStyle } from './styles/global'
-import { Header } from './components/Header/Index'
+import { Home } from './Home/Index'
+import { Header } from '../src/components/Header/Index'
+
 function App() {
    return(
         <ThemeProvider theme={defaultTheme}>
-            <Header/>
+            <Home/>
             <GlobalStyle/>
         </ThemeProvider>
    )
