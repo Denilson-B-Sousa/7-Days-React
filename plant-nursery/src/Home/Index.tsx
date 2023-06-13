@@ -1,8 +1,34 @@
 import { HomeContainer } from "./styles"
 import vector from "../assets/vector.svg"
 import Hero from "../assets/hero-image.png"
+import sheets from "../assets/sheets.png"
 import { Header } from "../components/Header/Index"
+import { Card } from "../components/Card/Index"
 export function Home(){
+    const plants = [
+        {
+            "name" : "Ajuga reptans",
+            "price" : "R$ 20,00",
+        },
+
+        {
+            "name" : "Cordyline fructicosa",
+            "price": "R$ 20,00",
+        },
+
+        {
+            "name" : "Crassula ovata",
+            "price" : "Cyperus rotundus",
+        },
+        {
+            "name" : "Delaire odorata",
+            "price" : "R$20,00",
+        },
+        {
+            "name" : "Datura metel",
+            "price" : "R$20,00",
+        }
+    ]
     return(
         <HomeContainer>
             <Header/>
@@ -29,7 +55,28 @@ export function Home(){
                     <button type="submit">Assinar newsletter</button>
                 </div>
             </section>
-           
+
+            <section className="card-section">
+                <div className="card-image">
+                    <img src={sheets} alt="folhas verdes"/>
+                </div>
+                <div className="card-content">
+                    <span>Como conseguir</span>
+                    <h2>minha planta</h2>
+                    <ul className="list">
+                        <li className="list-item">Escolha suas plantas</li>
+                        <li>Faça seu pedido</li>
+                        <li>Aguarde na sua casa</li>
+                    </ul>
+                </div>
+            </section>
+
+            {plants.map((plant =>
+                <Card 
+                    
+
+                />
+            ))}
         </HomeContainer>
     )
 }

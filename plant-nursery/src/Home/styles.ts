@@ -11,7 +11,7 @@ export const HomeContainer = styled.main`
      position: absolute;
      top: -100px;
      right: -170px;
-     z-index: -4;
+     z-index: -2;
      max-width: 850px;
    }
      
@@ -26,6 +26,27 @@ export const HomeContainer = styled.main`
      top: 0;
      right: 0;
      bottom: 0;
+     z-index: -2;
+   }
+
+   .card-section{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 64px;
+     background-color: ${(props) => props.theme['white']};
+     margin-top: 13rem;
+   }
+
+   .list{
+     
+   }
+
+   .card-section > div > h2{
+     font-family: Elsie Swash Caps;
+   }
+
+   .card-content{
    }
 
 
