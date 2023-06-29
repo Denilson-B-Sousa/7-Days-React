@@ -3,32 +3,24 @@ import vector from "../assets/vector.svg"
 import Hero from "../assets/hero-image.png"
 import sheets from "../assets/sheets.png"
 import { Header } from "../components/Header/Index"
-import { Card } from "../components/Card/Index"
+import  Card  from "../components/Card/Index"
+
 export function Home(){
-    const plants = [
-        {
-            "name" : "Ajuga reptans",
-            "price" : "R$ 20,00",
-        },
+    interface Item {
+        title: string;
+        price: string;
+        src: string;
+      }
 
-        {
-            "name" : "Cordyline fructicosa",
-            "price": "R$ 20,00",
-        },
+    const items: Item[] = [
+        { title: 'Ajuda-reptans', price: 'R$20,00', src: '../../src/assets/Ajuda-reptans.png' },
+        { title: 'Cordyline', price: 'R$20,00', src: '../../src/assets/Cordyline.png' },
+        { title: 'Crassula', price: 'R$20,00', src: '../../src/assets/Crassula.png' },
+        { title: 'Cyperus', price: 'R$20,00', src: '../../src/assets/Cyperus.png' },
+        { title: 'Datura', price: 'R$20,00', src: '../../src/assets/Datura.png'},
+        { title: 'Delairea', price: 'R$20,00', src: '../../src/assets/Delairea.png'}
+      ];
 
-        {
-            "name" : "Crassula ovata",
-            "price" : "Cyperus rotundus",
-        },
-        {
-            "name" : "Delaire odorata",
-            "price" : "R$20,00",
-        },
-        {
-            "name" : "Datura metel",
-            "price" : "R$20,00",
-        }
-    ]
     return(
         <HomeContainer>
             <Header/>
@@ -52,7 +44,7 @@ export function Home(){
 
                 <div className="newsletter">
                     <input type="email" placeholder="Insira seu e-mail"/>
-                    <button type="submit">Assinar newsletter</button>
+                    <button type="submit" className="button-newsletter">Assinar newsletter</button>
                 </div>
             </section>
 
@@ -70,13 +62,19 @@ export function Home(){
                     </ul>
                 </div>
             </section>
-
-            {plants.map((plant =>
-                <Card 
-                    
-
+        <section className="cards">
+            {items.map(item => (
+                <Card
+                    key={item.title}
+                    title={item.title}
+                    price={item.price}
+                    src={item.src}
                 />
             ))}
+        </section>
+        
+           
+           
         </HomeContainer>
     )
 }

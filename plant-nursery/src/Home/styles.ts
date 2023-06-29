@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import React from 'react';
 
 export const HomeContainer = styled.main`
   
@@ -46,7 +47,10 @@ export const HomeContainer = styled.main`
      font-family: Elsie Swash Caps;
    }
 
-   .card-content{
+   .cards{
+     display: grid;
+     grid-template-columns: 400px 400px 400px;
+     justify-content: center;
    }
 
 
@@ -103,7 +107,7 @@ export const HomeContainer = styled.main`
         
    }
 
-   button{
+   .button-newsletter{
         width: 184px;
         height: 100%;
         padding: 25px;   
