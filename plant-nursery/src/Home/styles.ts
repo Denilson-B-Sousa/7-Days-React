@@ -140,3 +140,19 @@ export const CardsContainer = styled.section`
      justify-content: center;
     
 `
+
+export const FooterSection = styled.footer`
+      text-align: center;
+      font-size: 0.75rem;
+      background-color: ${(props) => props.theme['yellow-100']};
+      
+      ul{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        gap: 32px;
+      }
+
+  
+    
+`

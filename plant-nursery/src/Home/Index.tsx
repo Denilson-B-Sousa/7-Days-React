@@ -1,9 +1,10 @@
-import { CardsContainer, CardsTitle, HomeContainer } from "./styles"
+import { CardsContainer, CardsTitle, FooterSection, HomeContainer } from "./styles"
 import vector from "../assets/vector.svg"
 import Hero from "../assets/hero-image.png"
 import sheets from "../assets/sheets.png"
 import { Header } from "../components/Header/Index"
 import  Card  from "../components/Card/Index"
+import { FacebookLogo, InstagramLogo, PinterestLogo } from "phosphor-react"
 
 export function Home(){
     interface Item {
@@ -22,6 +23,7 @@ export function Home(){
       ];
 
     return(
+    <>
         <HomeContainer>
             <Header/>
             <div className="home-banner-container">
@@ -80,5 +82,15 @@ export function Home(){
            
            
         </HomeContainer>
+        <FooterSection>
+             <ul>
+                <li><a href=""><FacebookLogo width={"48px"} height={"48px"}/></a></li>
+                <li><a href=""><InstagramLogo width={"48px"} height={"48px"}/></a></li>
+                <li><a href=""><PinterestLogo width={"48px"} height={"48px"}/></a></li>
+             </ul>
+             <p><a href="">Terms of use - privacy policy</a></p>
+             <p>© 2023 Plant Nursery</p>
+        </FooterSection>
+    </>
     )
 }
