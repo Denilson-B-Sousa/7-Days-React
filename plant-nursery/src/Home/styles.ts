@@ -47,11 +47,7 @@ export const HomeContainer = styled.main`
      font-family: Elsie Swash Caps;
    }
 
-   .cards{
-     display: grid;
-     grid-template-columns: 400px 400px 400px;
-     justify-content: center;
-   }
+   
 
 
    .hero-image{
@@ -94,8 +90,8 @@ export const HomeContainer = styled.main`
    }
 
    input{
-        width: 250px;
-        padding: 18px;   
+        width: 200px;
+        padding: calc(1rem + 1px);   
         border: none;
         font-family: Montserrat;
         font-size: 0.5rem;
@@ -103,9 +99,6 @@ export const HomeContainer = styled.main`
 
    }
 
-   input:active{
-        
-   }
 
    .button-newsletter{
         width: 184px;
@@ -123,4 +116,27 @@ export const HomeContainer = styled.main`
 
    
 
+`
+
+export const CardsTitle = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+
+   h2{
+      font-family: Elsie Swash Caps;
+    
+
+    }
+    span{
+      font-family: Montserrat;
+    }
+`
+export const CardsContainer = styled.section`
+   
+     display: grid;
+     grid-template-columns: 400px 400px 400px;
+     justify-content: center;
+    
 `

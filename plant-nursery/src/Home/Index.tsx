@@ -1,4 +1,4 @@
-import { HomeContainer } from "./styles"
+import { CardsContainer, CardsTitle, HomeContainer } from "./styles"
 import vector from "../assets/vector.svg"
 import Hero from "../assets/hero-image.png"
 import sheets from "../assets/sheets.png"
@@ -62,16 +62,20 @@ export function Home(){
                     </ul>
                 </div>
             </section>
-        <section className="cards">
-            {items.map(item => (
-                <Card
-                    key={item.title}
-                    title={item.title}
-                    price={item.price}
-                    src={item.src}
-                />
-            ))}
-        </section>
+            <CardsTitle>
+                <span>Conheça nossas</span>
+                <h2>Ofertas</h2>
+            </CardsTitle>
+            <CardsContainer>
+                {items.map(item => (
+                    <Card
+                        key={item.title}
+                        title={item.title}
+                        price={item.price}
+                        src={item.src}
+                    />
+                ))}
+            </CardsContainer>
         
            
            
